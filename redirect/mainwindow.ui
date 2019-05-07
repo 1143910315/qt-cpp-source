@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
-    <height>320</height>
+    <width>538</width>
+    <height>324</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -17,13 +17,253 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1">
     <item>
      <widget class="QTextEdit" name="textEdit">
       <property name="acceptDrops">
        <bool>false</bool>
       </property>
      </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+      <item>
+       <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1" columnstretch="1,1,1,0,0,0" rowminimumheight="1,1,1" columnminimumwidth="1,1,1,0,0,0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item row="2" column="0">
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGraphicsView" name="graphicsView_4">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>255</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QGraphicsView" name="graphicsView_2">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="146">
+             <red>255</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+          <property name="foregroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="172">
+             <red>64</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QGraphicsView" name="graphicsView_3">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QGraphicsView" name="graphicsView_8">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QGraphicsView" name="graphicsView_9">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QGraphicsView" name="graphicsView_5">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="graphicsView_7">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QGraphicsView" name="graphicsView_6">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
