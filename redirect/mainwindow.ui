@@ -33,7 +33,7 @@
          <enum>QLayout::SetDefaultConstraint</enum>
         </property>
         <item row="2" column="0">
-         <widget class="QGraphicsView" name="graphicsView">
+         <widget class="MyGraphicsView" name="graphicsView">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -48,20 +48,11 @@
           </property>
           <property name="acceptDrops">
            <bool>false</bool>
-          </property>
-          <property name="backgroundBrush">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>0</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QGraphicsView" name="graphicsView_4">
+         <widget class="MyGraphicsView" name="graphicsView_4">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -76,20 +67,11 @@
           </property>
           <property name="acceptDrops">
            <bool>false</bool>
-          </property>
-          <property name="backgroundBrush">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
           </property>
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QGraphicsView" name="graphicsView_2">
+         <widget class="MyGraphicsView" name="graphicsView_2">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -105,28 +87,10 @@
           <property name="acceptDrops">
            <bool>false</bool>
           </property>
-          <property name="backgroundBrush">
-           <brush brushstyle="SolidPattern">
-            <color alpha="146">
-             <red>255</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
-          <property name="foregroundBrush">
-           <brush brushstyle="SolidPattern">
-            <color alpha="172">
-             <red>64</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
          </widget>
         </item>
         <item row="2" column="4">
-         <widget class="QGraphicsView" name="graphicsView_3">
+         <widget class="MyGraphicsView" name="graphicsView_3">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -145,7 +109,7 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QGraphicsView" name="graphicsView_8">
+         <widget class="MyGraphicsView" name="graphicsView_8">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -164,7 +128,7 @@
          </widget>
         </item>
         <item row="0" column="4">
-         <widget class="QGraphicsView" name="graphicsView_9">
+         <widget class="MyGraphicsView" name="graphicsView_9">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -183,7 +147,7 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QGraphicsView" name="graphicsView_5">
+         <widget class="MyGraphicsView" name="graphicsView_5">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -199,19 +163,10 @@
           <property name="acceptDrops">
            <bool>false</bool>
           </property>
-          <property name="backgroundBrush">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>0</red>
-             <green>0</green>
-             <blue>0</blue>
-            </color>
-           </brush>
-          </property>
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QGraphicsView" name="graphicsView_7">
+         <widget class="MyGraphicsView" name="graphicsView_7">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -230,7 +185,7 @@
          </widget>
         </item>
         <item row="1" column="4">
-         <widget class="QGraphicsView" name="graphicsView_6">
+         <widget class="MyGraphicsView" name="graphicsView_6">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -269,6 +224,13 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">mygraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

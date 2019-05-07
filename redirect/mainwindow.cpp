@@ -12,15 +12,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QRandomGenerator random=QRandomGenerator::securelySeeded();
-    ui->graphicsView->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_2->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_3->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_4->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_5->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_6->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_7->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_8->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
-    ui->graphicsView_9->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",random.bounded(256),random.bounded(256),random.bounded(256)));
+    ui->graphicsView->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_2->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_3->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_4->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_5->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_6->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_7->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_8->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
+    ui->graphicsView_9->setBackgroudColor(random.bounded(256),random.bounded(256),random.bounded(256));
 }
 
 MainWindow::~MainWindow()
@@ -56,5 +56,16 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event)
     event->accept();
 }
 
+void MainWindow::dropEvent(QDropEvent *event){
+    const QMimeData *localMimeData = event->mimeData();
+    if(localMimeData->hasColor()){
+        QColor color = qvariant_cast<QColor>(event->mimeData()->colorData());
+        int red = color.red();
+        int green = color.green();
+        int blue = color.blue();
+        this->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",red,green,blue));
+
+    }
+}
 
 
