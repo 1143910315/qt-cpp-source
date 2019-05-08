@@ -59,12 +59,32 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 void MainWindow::dropEvent(QDropEvent *event){
     const QMimeData *localMimeData = event->mimeData();
     if(localMimeData->hasColor()){
-        QColor color = qvariant_cast<QColor>(event->mimeData()->colorData());
+        QColor color = qvariant_cast<QColor>(localMimeData->colorData());
         int red = color.red();
         int green = color.green();
         int blue = color.blue();
-        this->setStyleSheet(QString::asprintf("background: rgb(%d,%d,%d)",red,green,blue));
-
+        this->setStyleSheet(QString::asprintf("#MainWindow{background: rgb(%d,%d,%d)}",red,green,blue));
+    }
+    if(localMimeData->hasImage()){
+        QImage img= qvariant_cast<QImage>(localMimeData->imageData());
+        pictureView=new PictureView(this);
+        pictureView->setModal(false)
+                ->showPicture(img)
+                ->show();
+    }
+    if(localMimeData->hasHtml()){
+        QString localHtml = localMimeData->html();
+        htmlView=new HtmlView(this);
+        htmlView->setModal(false)
+                ->showHtml(localHtml)
+                ->show();
+    }
+    if(localMimeData->hasUrls()){
+        QList<QUrl> localUrls = localMimeData->urls();
+        urlsView=new UrlsView();
+        urlsView->setModal(false)
+                ->showUrls(localUrls)
+                ->show();
     }
 }
 

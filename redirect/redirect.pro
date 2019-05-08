@@ -25,16 +25,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        htmlview.cpp \
         main.cpp \
         mainwindow.cpp \
-        mygraphicsview.cpp
+        mygraphicsview.cpp \
+        pictureview.cpp \
+        urlsview.cpp
 
 HEADERS += \
+        htmlview.h \
         mainwindow.h \
-        mygraphicsview.h
+        mygraphicsview.h \
+        pictureview.h \
+        urlsview.h
 
 FORMS += \
-        mainwindow.ui
+        htmlview.ui \
+        mainwindow.ui \
+        pictureview.ui \
+        urlsview.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

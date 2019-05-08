@@ -31,7 +31,7 @@ void MyGraphicsView::mouseMoveEvent(QMouseEvent *event)
     this->viewport()->setCursor(Qt::PointingHandCursor);
     if(event->buttons()&Qt::LeftButton){
         int distance = (event->pos() - startPos).manhattanLength();
-        if (distance >= QApplication::startDragDistance() && !this->rect().contains(event->pos())){
+        if (distance >= QApplication::startDragDistance()){
             QMimeData *mimeData = new QMimeData;
             mimeData->setColorData(QColor(red,green,blue));
             QDrag* drag = new QDrag(this);
