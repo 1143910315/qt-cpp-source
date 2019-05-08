@@ -36,6 +36,10 @@ UrlsView *UrlsView::showUrls(const QList<QUrl> &urls)
         pLabel->setText(localUrl);
         QPushButton *pOpenButton = new QPushButton(this);
         pOpenButton->setText("打开此链接");
+        QSizePolicy localSizePolicy = pOpenButton->sizePolicy();
+        localSizePolicy.setVerticalPolicy(QSizePolicy::Ignored);
+        localSizePolicy.setHorizontalPolicy(QSizePolicy::Ignored);
+        pOpenButton->setSizePolicy(localSizePolicy);
         buttonMapToUrl->insert(pOpenButton,new QUrl(url));
         connect(pOpenButton, SIGNAL(clicked()), this, SLOT(openUrl()));
         pLayout->addWidget(pLabel, row, 0);
