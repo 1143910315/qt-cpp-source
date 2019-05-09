@@ -16,7 +16,7 @@ void CompatibleDingTalk::transformationDingTalkUrlToFileName(const QString &ding
     QStringList localCapturedTexts = regexp.capturedTexts();
     if(pos!=-1){
         QString source=localCapturedTexts.at(1);
-        QByteArray tempArray = QByteArray::fromBase64();
+//        QByteArray tempArray = QByteArray::fromBase64();
 //        foreach(QString str,localCapturedTexts){
 //            qDebug()<<str;
 //        }
