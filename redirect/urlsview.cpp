@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QSignalMapper>
+#include <QTextEdit>
 #include <QUrl>
 
 UrlsView::UrlsView(QWidget *parent) :
@@ -32,17 +33,21 @@ UrlsView *UrlsView::showUrls(const QList<QUrl> &urls)
     int row=0;
     foreach (QUrl url, urls) {
         QString localUrl = url.url();
-        QLabel *pLabel = new QLabel(this);
-        pLabel->setText(localUrl);
+        QTextEdit *pTextEdit = new QTextEdit(this);
+        pTextEdit->setText(localUrl);
         QPushButton *pOpenButton = new QPushButton(this);
         pOpenButton->setText("打开此链接");
         QSizePolicy localSizePolicy = pOpenButton->sizePolicy();
-        localSizePolicy.setVerticalPolicy(QSizePolicy::Ignored);
-        localSizePolicy.setHorizontalPolicy(QSizePolicy::Ignored);
+        localSizePolicy.setVerticalPolicy(QSizePolicy::Fixed);
+        localSizePolicy.setHorizontalPolicy(QSizePolicy::Fixed);
         pOpenButton->setSizePolicy(localSizePolicy);
         buttonMapToUrl->insert(pOpenButton,new QUrl(url));
+        localSizePolicy = pTextEdit->sizePolicy();
+        localSizePolicy.setVerticalPolicy(QSizePolicy::Preferred);
+        localSizePolicy.setHorizontalPolicy(QSizePolicy::Preferred);
+        pTextEdit->setSizePolicy(localSizePolicy);
         connect(pOpenButton, SIGNAL(clicked()), this, SLOT(openUrl()));
-        pLayout->addWidget(pLabel, row, 0);
+        pLayout->addWidget(pTextEdit, row, 0);
         pLayout->addWidget(pOpenButton, row++, 1);
     }
     setLayout(pLayout);

@@ -25,6 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        base64.cpp \
+        compatibledingtalk.cpp \
         htmlview.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,6 +35,8 @@ SOURCES += \
         urlsview.cpp
 
 HEADERS += \
+        base64.h \
+        compatibledingtalk.h \
         htmlview.h \
         mainwindow.h \
         mygraphicsview.h \
