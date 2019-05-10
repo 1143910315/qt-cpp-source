@@ -46,6 +46,7 @@ UrlsView *UrlsView::showUrls(const QList<QUrl> &urls)
         localSizePolicy.setVerticalPolicy(QSizePolicy::Preferred);
         localSizePolicy.setHorizontalPolicy(QSizePolicy::Preferred);
         pTextEdit->setSizePolicy(localSizePolicy);
+        pTextEdit->setAcceptDrops(false);
         connect(pOpenButton, SIGNAL(clicked()), this, SLOT(openUrl()));
         pLayout->addWidget(pTextEdit, row, 0);
         pLayout->addWidget(pOpenButton, row++, 1);

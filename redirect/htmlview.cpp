@@ -55,6 +55,6 @@ void HtmlView::change()
 
 void HtmlView::appendText(const QString &str)
 {
-    ui->textBrowser->insertHtml(str);
     ui->textEdit->insertPlainText(str);
+    ui->textBrowser->setHtml(ui->textEdit->toPlainText());
 }
